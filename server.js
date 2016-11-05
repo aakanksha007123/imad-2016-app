@@ -7,9 +7,9 @@ app.use(morgan('combined'));
 var articles{
   'article-one':{
                  title:'article one|Aakanksha Malhotra',
-                 heading:'article-one',
+                 heading:'article-one';
                  date:5th nov 2016,
-                  content:`
+                 content:`
                   <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
                        <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
                        <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>`
