@@ -6,14 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 var articles{
   'article-one':{
-    title:'article one|Aakanksha Malhotra',
-    heading:'article-one',
-    content:`<p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
-          <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
-          <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>`
-          },       
+                 title:'article one|Aakanksha Malhotra',
+                 heading:'article-one',
+                  content:`<p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
+                       <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
+                       <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>`
+                   },       
 'article-two':{
-              title:'article two|Aakanksha Malhotra',
+               title:'article two|Aakanksha Malhotra',
                heading:'article-two',
                content:`<p> This is the content of my second article. Hello my name is Aakanksha Malhotra.I am a Btech Student of         3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
                         <p> This is the content of my second article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
