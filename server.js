@@ -8,13 +8,16 @@ var articles{
   'article-one':{
                  title:'article one|Aakanksha Malhotra',
                  heading:'article-one',
-                  content:`<p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
+                 date:5th nov 2016,
+                  content:`
+                  <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
                        <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
                        <p> This is the content of my first article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>`
                    },       
 'article-two':{
                title:'article two|Aakanksha Malhotra',
                heading:'article-two',
+               date:10 nov 2016,
                content:`<p> This is the content of my second article. Hello my name is Aakanksha Malhotra.I am a Btech Student of         3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
                         <p> This is the content of my second article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
                          <p> This is the content of my second article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>`
@@ -23,6 +26,7 @@ var articles{
 'article-three':{
     title:'article three|Aakanksha Malhotra',
     heading:'article-three',
+    date:15 nov 2016,
     content:`<p> This is the content of my third article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
           <p> This is the content of my third article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>
           <p> This is the content of my third article. Hello my name is Aakanksha Malhotra.I am a Btech Student of 3rd year at JSS Academy of Technical Education,Noida ,Uttar Pradesh</p>`}
@@ -64,8 +68,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/:article-Name',function(req,res){
-    var articleName=req.params.article-Name;
-res.send(createTemplate(articles[article-Name]));
+    var articleName=req.params.articleName;
+res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
