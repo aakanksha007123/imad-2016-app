@@ -14,5 +14,10 @@ button.onClick=function(){
              span.innerHTML=counter.toString();  
           }
       }
+      // not done yet
+      
   };
+  //Make a request
+  request.open('GET','http://aakanksha007123.imad.hasura-app.io/counter',true);
+  request.send(null);
   };
