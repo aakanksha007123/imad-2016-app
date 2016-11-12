@@ -35,11 +35,14 @@ app.get('/ui/main.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
-app.get('/submit-one', function (req, res) {
- var names=[];
+var names=[];
+app.get('/submit-one/:name', function (req, res) {
+ //get the names from the request
+ var names=req.params.name;
  names.push(name);
- res.send(names);
+ //JSON
+ 
+ res.send(JSON.stringfy(names));
 
  
 });
