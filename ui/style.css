@@ -6,9 +6,9 @@ body {
 
 .center {
     text-align: center;
-    padding-top:100px;
-    padding-left:50px;
-    padding-right:50px;
+    
+    padding-left:200px;
+    padding-right:200px;
 }
 
 .text-big {
