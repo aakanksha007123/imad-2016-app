@@ -37,6 +37,7 @@ text-align:center;
     padding-right: 200px;
 }
 .textarea {
+    text-align:center;
     display: block;
     margin-left: auto;
     margin-right: auto;
