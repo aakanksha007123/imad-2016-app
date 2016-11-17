@@ -31,8 +31,17 @@ app.get('/ui/main.js',function(req,res){
 });
 app.get('/ui/madi.png',function(req,res){
    res.sendFile(path(__dirname,'ui','madi.png'));
+   });
+   app.get('/ui/main.js',function(req,res){
+   res.sendFile(path(__dirname,'ui','main.js'));
+});
+var names[];
+app.get('/submit-name/:name',function(req,res){
+    var name=req.params.name;
+    names.push(name);
+    res.send(JSON,stringify(names));
 });
 var port=8080;
 app.listen(8080,function(){
-    console.log('IMAD course app is listening on the port $(port)!');
+    console.log(`IMAD course app is listening on port $(port)!`);
 });
