@@ -39,7 +39,9 @@ text-align:center;
 .textarea {
     display:inline-block; 
     vertical-align:middle; 
-    
+    resize: horizontal;
+    overflow: auto;
+     width: 200px;
 }
 
 
