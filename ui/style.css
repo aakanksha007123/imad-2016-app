@@ -36,11 +36,8 @@ text-align:center;
     padding-right: 200px;
 }
 .textarea {
-    display:inline-block; 
-    vertical-align:middle; 
-    resize: horizontal;
-    overflow: auto;
-     width: 200px;
+    width: 300px;
+    height: 150px;
 }
 
 
