@@ -1,49 +1,52 @@
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
+//counter code
+var button=document.getElementById('counter');
 
-var app = express();
-app.use(morgan('combined'));
+button.onclick=function(){
+  //create a request to the counter endpoint
+  var request=new XMLHttpRequest();
+  //capture the response and store it in the variable
+  request.onreadystatechange=function(){
+      if(request.readyState==XMLHttpRequest.DONE){
+          //take action
+          if(request.status==200){
+              var counter=request.responseText;
+             var span=document.getElementById('count');
+             span.innerHTML=counter.toString();  
+          }
+      }
+      // not done yet
+      
+  };
+  //Make a request
+  //request.open('GET','http://aakanksha007123.imad.hasura-app.io/counter',true);
+  request.open('GET','/counter',true);
+  request.send(null);
+  };
+  // submit name
+  var nameInput=document.getElementById('name');
+var submit=document.getElementById('submit_btn');
+submit.onclick=function(){
+	var name=nameInput.value;
+	var request=new XMLHttpRequest();
+	request.onreadystatechange=function(){
+	  if(request.readyState==XMLHttpRequest.DONE){
+		  if(request.status==200){
+			var namesList=request.responseText;
+			names=JSON.parse(namesList);
+			var list='';
+			for(var i=0;i<names.length;i++){
+			list+='<li>' + names[i] +'<li>';
+			}
 
+			var ul=document.getElementById('namelist');
+			ul.innerHTML=list;
+		  }
+	  }
+	}
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-  
-});
-var counter=0;
-app.get('/counter', function (req, res) {
-  counter=counter+1;
-  res.send(counter.toString());
-});
-app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-});
-app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
+	//request.open('GET','http://aakanksha007123.imad.hasura-app.io/submit-one?name='+name,true);
+	request.open('GET','/submit-one?name='+name,true);
+	request.send('null');
+	request.send(null);
 
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
-var names=[];
-app.get('/submit-one', function (req, res) {//URL:/submit-name?name=xxxxx
- //get the names from the request
- var name=req.query.name;
- names.push(name);
- //JSON
- res.send(JSON.stringify(names));
-});
-var port = 8080; // Use 8080 for local development because you might already have apache running on 80
-app.listen(8080, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
-});
+};
