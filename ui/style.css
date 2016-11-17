@@ -1,10 +1,12 @@
 body {
     font-family: sans-serif;
     margin-top: 75px;
+    background-color:blue;
 }
 
 .center {
     text-align: center;
+    text-color:white;
     
 }
 
