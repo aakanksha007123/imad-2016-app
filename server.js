@@ -23,3 +23,7 @@ app.get('/ui/style.css',function(req,res){
 app.get('/ui/madi.png',function(req,res){
    res.sendFile(path(__dirname,'ui','madi.png'));
 });
+var port=8080;
+app.listen(8080,function(){
+    console.log('IMAD course app is listening on the port $(port)!');
+});
