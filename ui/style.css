@@ -24,9 +24,8 @@ text-align:center;
 
 .img-medium {
     
-   display: block;
-   max-width:230px;
-  max-height:95px;
+  width:230px;
+  height:230px;
   
 }
 .container{
