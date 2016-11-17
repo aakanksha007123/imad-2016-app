@@ -28,7 +28,7 @@ app.get('/article-three', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-app.get('/ui/main.css', function (req, res) {
+app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
@@ -38,11 +38,11 @@ app.get('/ui/madi.png', function (req, res) {
 var names=[];
 app.get('/submit-one', function (req, res) {//URL:/submit-name?name=xxxxx
  //get the names from the request
- var names=req.query.name;
+ var name=req.query.name;
  names.push(name);
  //JSON
  
- res.send(JSON.stringfy(names));
+ res.send(JSON.stringify(names));
 
  
 });
