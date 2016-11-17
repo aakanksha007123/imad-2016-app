@@ -10,6 +10,7 @@ button.onClick=function(){
           //take action
           if(request.status==200){
               var counter=request.responseText;
+              names=JSON.parse(names);
              var span=document.getElementById('counter');
              span.innerHTML=counter.toString();  
           }
@@ -28,7 +29,7 @@ button.onClick=function(){
   submit.onclick=function(){
     //make a request to the server and send the name
     //capture the list of names and render it as a list
-    var names=['name1','name2','name3','name4'];
+    var names=request.responseText;
     var list='';
     for(var i=0;i<var.length;i++){
         list+='<li>' + names[i] +'<li>'
