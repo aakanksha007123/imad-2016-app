@@ -33,8 +33,7 @@ button.onClick=function(){
     var list='';
     for(var i=0;i<var.length;i++){
         list+='<li>' + names[i] +'<li>'
-        
-    }
+        }
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
   };
