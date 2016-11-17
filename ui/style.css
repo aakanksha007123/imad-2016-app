@@ -40,6 +40,7 @@ text-align:center;
     height: 150px;
     resize: horizontal;
     overflow: auto;
+    border-style: solid;
 }
 
 
