@@ -35,7 +35,7 @@ app.get('/ui/madi.png',function(req,res){
    app.get('/ui/main.js',function(req,res){
    res.sendFile(path(__dirname,'ui','main.js'));
 });
-var names[];
+var names=[];
 app.get('/submit-name/:name',function(req,res){
     var name=req.params.name;
     names.push(name);
