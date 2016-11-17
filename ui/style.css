@@ -37,8 +37,9 @@ text-align:center;
     padding-right: 200px;
 }
 .textarea {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display:inline-block; 
+    vertical-align:middle; 
+    
 }
+
 
