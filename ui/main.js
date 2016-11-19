@@ -1,13 +1,4 @@
-function loadLoginForm () {
-    var loginHtml = `
-        <h3>Login/Register to unlock awesome features</h3>
-        <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" />
-        <br/><br/>
-        <input type="submit" id="login_btn" value="Login" />
-        <input type="submit" id="register_btn" value="Register" />
-        `;
-    document.getElementById('login_area').innerHTML = loginHtml;
+
     
     // Submit username/password to login
     var submit = document.getElementById('login_btn');
@@ -40,7 +31,7 @@ function loadLoginForm () {
         var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
-        request.open('POST', '/login', true);
+        request.open('POST', 'http://aakanksha007123.imad.hasura-app.io/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
         submit.value = 'Logging in...';
@@ -138,95 +129,11 @@ loadLogin();
 loadArticles();
 //counter code
 
-var button=document.getElementById('counter');
 
-
-button.onclick=function(){
-  
-//create a request to the counter endpoint
-  
-var request=new XMLHttpRequest();
-  
-//capture the response and store it in the variable
-  
-request.onreadystatechange=function(){
-      
-if(request.readyState==XMLHttpRequest.DONE){
           
-//take action
-          
-if(request.status==200){
-              
-var counter=request.responseText;
-             
-var span=document.getElementById('count');
-             
-span.innerHTML=counter.toString();  
-          
-}
-      
-}
-      // not done yet
-  
-};
-  
-//Make a request
-  
-//request.open('GET','http://aakanksha007123.imad.hasura-app.io/counter',true);
-  
-request.open('GET','/counter',true);
-  
-request.send(null);
 
-};
-
-// submit name
-
-var nameInput=document.getElementById('name');
-
-var submit=document.getElementById('submit_btn');
-
-submit.onclick=function() {
 	
-var name=nameInput.value;
-	
-var request=new XMLHttpRequest();
-	
-request.onreadystatechange=function(){
-	  
-if(request.readyState==XMLHttpRequest.DONE){
-		  
-if(request.status==200){
-			
-var namesList=request.responseText;
-			
-names=JSON.parse(namesList);
-			
-var list='';
-			
-for(var i=0;i<names.length;i++) {
-				
-list+='<li>' + names[i] +'</li>';
-			
-}
 
 
 			
-var ul=document.getElementById('namelist');
-			
-ul.innerHTML=list;
-		  
-}
-	  
-}
-	
-}
 
-
-//request.open('GET','http://aakanksha007123.imad.hasura-app.io/submit-one?name='+name,true);
-	
-request.open('GET','/submit-one?name='+name,true);
-	
-request.send('null');
-
-};
