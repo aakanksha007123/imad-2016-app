@@ -42,5 +42,10 @@ padding-left: 25px;
     overflow: auto;
     border-style: solid;
 }
+.loginarea{
+    position:absolute;
+    right:0px;
+}
+}
 
 
