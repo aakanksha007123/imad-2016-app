@@ -45,6 +45,11 @@ var loginHtml = `
         var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
+        if (username == '' || password == '') {
+        // Inform the user on the screen through some message or give him a alert message
+        alert("Username/Password field can't be left empty");
+        return;
+    }`
         request.open('POST', 'http://aakanksha007123.imad.hasura-app.io/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
