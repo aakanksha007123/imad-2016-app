@@ -47,7 +47,7 @@ var loginHtml = `
         // Inform the user on the screen through some message or give him a alert message
         alert("Username/Password field can't be left empty");
         return;
-    }`
+    }
         console.log(username);
         console.log(password);
         request.open('POST', 'http://aakanksha007123.imad.hasura-app.io/login', true);
