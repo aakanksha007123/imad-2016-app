@@ -43,8 +43,9 @@ padding-left: 25px;
     border-style: solid;
 }
 .loginarea{
-    float:right;
-    clear:both;
+    top: 0.3em;
+    right: 0.3em;
+    position: absolute;
 }
 
 
