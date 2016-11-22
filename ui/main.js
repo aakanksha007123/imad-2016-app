@@ -1,5 +1,6 @@
 function loadLoginForm(){
 var loginHtml = `
+         <div class='loginarea'>
         <h3>Login/Register to unlock awesome features</h3>
 	        Username: <input type="text" id="username" placeholder="Username" /><br/><br/>
     	    Password:&nbsp;&nbsp;<input type="password" id="password" />
